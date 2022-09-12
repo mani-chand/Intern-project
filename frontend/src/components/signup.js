@@ -1,10 +1,11 @@
+import React from 'react'
 const Signup = () => {
     return ( 
         <React.Fragment>
-        <div className={Header}>
+        <div className="Header">
           <h1>Signup</h1>
         </div>
-        <div className={signin-form}>
+        <div className="signup-form">
           <div className="form-user">
               <label className="user-label">Name</label>
               <input type="text" 
