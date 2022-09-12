@@ -3,6 +3,7 @@ const userSchema = new mongoose.Schema({
     name: {type:String},
     mobilenumber: {type:Number},
     password: {type:String},
+    email:{type:String},
     address: {
         city:{type:String},
         pincode:{type:Number},
