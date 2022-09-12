@@ -11,6 +11,10 @@ const createUser=async(req,res,next)=>{
   }).save()
   res.json(newUser)
 }
+const getAllUsers = async (req,res,next) =>{
+  var Users = await userModel.find().exec();
+  res.json({ Users: Users.map(user => user.toObject({ getters: true })) })
+}
 const loginUser = async(req,res,next)=>{
   const {mobilenumber,password}=req.body
   var existingUser
@@ -28,4 +32,5 @@ const loginUser = async(req,res,next)=>{
   }
 }
 exports.createUser=createUser
+exports.getAllUsers=getAllUsers
 exports.loginUser=loginUser
